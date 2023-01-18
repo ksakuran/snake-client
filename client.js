@@ -8,7 +8,15 @@ const connect = function () {
 conn.setEncoding("utf8");
 
 conn.on('data', (data) => {
-  console.log(`Server said: ${data}`)
+  console.log(`Server said: ${data}`);
+});
+
+conn.on('connect', () => {
+  console.log("Successfully connected to the game server!");
+});
+
+conn.on('connect', () => {
+  conn.write("Name: KSN");
 });
 
 return conn;
@@ -16,4 +24,4 @@ return conn;
 
 module.exports = {
   connect,
-}
+};
