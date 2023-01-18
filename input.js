@@ -1,3 +1,5 @@
+const { connect } = require("./client");
+
 let connection;
 const handleUserInput = function (data) {
   if (data === '\u0003') {
@@ -14,6 +16,12 @@ const handleUserInput = function (data) {
   }
   if (data === "d") {
     connection.write("Move: right");
+  }
+  if (data === "k") {
+    connection.write("Say: lunch");
+  }
+  if (data === "l") {
+    connection.write("Say: time");
   }
 
 };
