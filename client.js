@@ -16,7 +16,7 @@ conn.on('connect', () => {
 });
 
 conn.on('connect', () => {
-  conn.write("Name: KSN");
+  conn.write("Name: Kat");
   //setInterval(() => conn.write("Move: up"), 50);
 });
 
