@@ -1,30 +1,20 @@
 const { connect } = require("./client");
+const { IP, PORT, inputKeys } = require("./constants");
+
+
 
 let connection;
 const handleUserInput = function (data) {
   if (data === '\u0003') {
     process.exit();
   }
-  if (data === "w") {
-    connection.write("Move: up");
+  const letter = inputKeys[data.toLowerCase()];
+  if (letter) {
+    connection.write(letter)
   }
-  if (data === "a") {
-    connection.write("Move: left");
-  }
-  if (data === "s") {
-    connection.write("Move: down");
-  }
-  if (data === "d") {
-    connection.write("Move: right");
-  }
-  if (data === "k") {
-    connection.write("Say: lunch");
-  }
-  if (data === "l") {
-    connection.write("Say: time");
-  }
-
 };
+
+
 
 // interface for handling user input from stdin
 
