@@ -10,7 +10,25 @@ const inputKeys = {
   "l": "Say: time",
   "m": "Say: yum!",
   "n": "Say: snek"
-}
+};
 
-module.exports = { IP, PORT, inputKeys }
+module.exports = {IP, PORT, inputKeys};
 
+// if (data === "w") {
+//   connection.write("Move: up");
+// }
+// if (data === "a") {
+//   connection.write("Move: left");
+// }
+// if (data === "s") {
+//   connection.write("Move: down");
+// }
+// if (data === "d") {
+//   connection.write("Move: right");
+// }
+// if (data === "k") {
+//   connection.write("Say: lunch");
+// }
+// if (data === "l") {
+//   connection.write("Say: time");
+// }

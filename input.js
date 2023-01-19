@@ -10,7 +10,7 @@ const handleUserInput = function (data) {
   }
   const letter = inputKeys[data.toLowerCase()];
   if (letter) {
-    connection.write(letter)
+    connection.write(letter);
   }
 };
 
@@ -29,4 +29,4 @@ const setupInput = function (conn) {
 };
 
 
-module.exports = {setupInput}
+module.exports = {setupInput};

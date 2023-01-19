@@ -6,23 +6,22 @@ const connect = function () {
     host: IP,
     port: PORT,
   });
-conn.setEncoding("utf8");
+  conn.setEncoding("utf8");
 
-conn.on('data', (data) => {
-  console.log(`Server said: ${data}`);
-});
+  conn.on('data', (data) => {
+    console.log(`Server said: ${data}`);
+  });
 
-conn.on('connect', () => {
-  console.log("Successfully connected to the game server!");
-});
+  conn.on('connect', () => {
+    console.log("Successfully connected to the game server!");
+  });
 
-conn.on('connect', () => {
-  conn.write("Name: Kat");
+  conn.on('connect', () => {
+    conn.write("Name: Kat");
   //setInterval(() => conn.write("Move: up"), 50);
-});
-
-
-return conn;
+  });
+  
+  return conn;
 };
 
 module.exports = {
